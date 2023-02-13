@@ -1,5 +1,7 @@
 I use the grep command 
 
+THe source for all these 4 command options: [GeeksforGeeks](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
+
 ## Grep -l ##
 
 # Ex 1: 
