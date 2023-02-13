@@ -2,6 +2,7 @@ I use the grep command
 
 Grep -l
 Ex 1: 
+```
 # code block 
  grep -l "Lucayans" ./written_2/*/*/*
  
@@ -13,7 +14,7 @@ grep: ./written_2/non-fiction/OUP/Fletcher: Is a directory
 grep: ./written_2/non-fiction/OUP/Kauffman: Is a directory
 grep: ./written_2/non-fiction/OUP/Rybczynski: Is a directory
 ./written_2/travel_guides/berlitz2/Bahamas-History.txt
-
+```
 This grep statment checks if if the path ./written_2/*/*/* contains any string called "Lucayans", 
 if so it returns the list of the file name that matches the input string only. It's useful because because can print the file path to the string only. 
 
