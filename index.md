@@ -4,10 +4,10 @@ I use the grep command
 
 # Ex 1: 
 ```
-# code block 
+# code block #
  grep -l "Lucayans" ./written_2/*/*/*
  
- # output 
+ # output #
  grep: ./written_2/non-fiction/OUP/Abernathy: Is a directory
 grep: ./written_2/non-fiction/OUP/Berk: Is a directory
 grep: ./written_2/non-fiction/OUP/Castro: Is a directory
@@ -22,10 +22,10 @@ if so it returns the list of the file name that matches the input string only. I
 # Ex 2 :
 
 ```
-# code block 
+# code block #
 [cs15lwi23adt@ieng6-201]:skill-demo1-data:539$ grep -l "Hedonism" ./written_2/*/*/*
 
-# output 
+# output #
 
 grep: ./written_2/non-fiction/OUP/Abernathy: Is a directory
 grep: ./written_2/non-fiction/OUP/Berk: Is a directory
@@ -44,11 +44,11 @@ if so it returns the list of the file name that matches the input string only. I
 # Ex 1: #
 
 ```
-# code block
+# code block #
 
 [cs15lwi23adt@ieng6-201]:skill-demo1-data:540$ grep -n "Lucayans" ./written_2/*/*/*
 
-# output 
+# output #
 
 grep: ./written_2/non-fiction/OUP/Abernathy: Is a directory
 grep: ./written_2/non-fiction/OUP/Rybczynski: Is a directory 
@@ -64,11 +64,11 @@ The grep -n prints out the matched line and their line number that contains "Luc
 # Ex 2: #
 
 ```
-# code block
+# code block #
 
 [cs15lwi23adt@ieng6-201]:skill-demo1-data:541$ grep -n "Hedonism" ./written_2/*/*/*
 
-# output 
+# output #
 
 grep: ./written_2/non-fiction/OUP/Abernathy: Is a directory
 grep: ./written_2/non-fiction/OUP/Berk: Is a directory       
@@ -78,8 +78,126 @@ grep: ./written_2/non-fiction/OUP/Kauffman: Is a directory
 grep: ./written_2/non-fiction/OUP/Rybczynski: Is a directory
 ./written_2/travel_guides/berlitz1/HandRJamaica.txt:7:       
  Hedonism II ❁❁❁❁❁ (AI) Norman Manley Blvd. , P.O. Box 25,  
+ 
  ```
  
  The grep -n prints out the matched line and their line number that contains "Hedonism" in the file in the path. This is useful if we want to know the exact line of the input what the paragraph is talking about it. 
  
- 
+## grep -i ## 
+
+# Ex 1: #
+
+```
+# code block #
+
+[cs15lwi23adt@ieng6-202]:skill-demo1-data:500$ grep -i  "hedonism" ./written_2/*/*/*
+
+# output 
+grep: ./written_2/non-fiction/OUP/Abernathy: Is a directory
+grep: ./written_2/non-fiction/OUP/Berk: Is a directory
+grep: ./written_2/non-fiction/OUP/Castro: Is a directory
+grep: ./written_2/non-fiction/OUP/Fletcher: Is a directory
+grep: ./written_2/non-fiction/OUP/Kauffman: Is a directory
+grep: ./written_2/non-fiction/OUP/Rybczynski: Is a directory
+./written_2/travel_guides/berlitz1/HandRJamaica.txt:        Hedonism II ❁❁❁❁❁ (AI) Norman Manley Blvd. , P.O. Box 25,
+./written_2/travel_guides/berlitz1/HistoryMadrid.txt:        Franco era through acts of hedonism and creative films, music and
+./written_2/travel_guides/berlitz1/IntroMallorca.txt:        the unbridled hedonism of topless beaches and singles bars, and the
+./written_2/travel_guides/berlitz1/WhatToMadeira.txt:        Brazilian-style 
+samba rhythms — but don’t expect the hedonism or
+
+grep -i prints out the file in the path that contains the input string no matter the case. This is useful when we want search if the path contain a string, no matter the syntax, which is useful for research. 
+
+
+# Ex 2: #
+
+``` 
+# code block #
+
+[cs15lwi23adt@ieng6-202]:skill-demo1-data:501$ grep -i  "hogmanay" ./written_2/*/*/*
+
+# output #
+
+grep: ./written_2/non-fiction/OUP/Abernathy: Is a directory
+grep: ./written_2/non-fiction/OUP/Berk: Is a directory
+grep: ./written_2/non-fiction/OUP/Castro: Is a directory
+grep: ./written_2/non-fiction/OUP/Fletcher: Is a directory
+grep: ./written_2/non-fiction/OUP/Kauffman: Is a directory
+grep: ./written_2/non-fiction/OUP/Rybczynski: Is a directory
+./written_2/travel_guides/berlitz1/IntroEdinburgh.txt:        world,” called 
+Hogmanay. The whole population comes out into the
+./written_2/travel_guides/berlitz1/WhatToEdinburgh.txt:        Hogmanay      
+./written_2/travel_guides/berlitz1/WhatToEdinburgh.txt:        into a five-night Hogmanay Festival of torchlight parades, street
+./written_2/travel_guides/berlitz1/WhatToEdinburgh.txt:        <www.edinburghshogmanay.org>). For those who still have some
+./written_2/travel_guides/berlitz1/WhatToEdinburgh.txt:        shortbread (traditionally served at Yuletide and Hogmanay) is rich in
+
+The grep -i command search for the path in written_2 if any of the file contains the string "hogmanay", if so then prints the file path and the line that contains it. This command is useful for research about a particular string since we don't need to care about case. 
+
+## grep -c ##
+
+# Ex 1: #
+
+``` 
+# code block #
+
+[cs15lwi23adt@ieng6-202]:skill-demo1-data:504$ grep -c "Hogmanay" ./written_2/*/*/IntroEdinburgh.txt
+
+# output #
+
+1
+
+grep -c prints the count of line that contains "Hogmanay" in the file IntroEdinburgh. This command is helpful if you want to make a data chart of the appearance of input string in a path. 
+
+# Ex 2: # 
+```
+# code block #
+
+[cs15lwi23adt@ieng6-202]:skill-demo1-data:506$ grep -c "Western" ./written_2/*/*/*/*
+
+# output #
+./written_2/non-fiction/OUP/Abernathy/ch1.txt:0
+./written_2/non-fiction/OUP/Abernathy/ch14.txt:0
+./written_2/non-fiction/OUP/Abernathy/ch15.txt:0
+./written_2/non-fiction/OUP/Abernathy/ch2.txt:0
+./written_2/non-fiction/OUP/Abernathy/ch3.txt:0
+./written_2/non-fiction/OUP/Abernathy/ch6.txt:0
+./written_2/non-fiction/OUP/Abernathy/ch7.txt:0
+./written_2/non-fiction/OUP/Abernathy/ch8.txt:0
+./written_2/non-fiction/OUP/Abernathy/ch9.txt:0
+./written_2/non-fiction/OUP/Berk/CH4.txt:4
+./written_2/non-fiction/OUP/Berk/ch1.txt:3
+./written_2/non-fiction/OUP/Berk/ch2.txt:3
+./written_2/non-fiction/OUP/Berk/ch7.txt:1
+./written_2/non-fiction/OUP/Castro/chA.txt:0
+./written_2/non-fiction/OUP/Castro/chB.txt:0
+./written_2/non-fiction/OUP/Castro/chC.txt:0
+./written_2/non-fiction/OUP/Castro/chL.txt:0
+./written_2/non-fiction/OUP/Castro/chM.txt:0
+./written_2/non-fiction/OUP/Castro/chN.txt:0
+./written_2/non-fiction/OUP/Castro/chO.txt:0
+./written_2/non-fiction/OUP/Castro/chP.txt:0
+./written_2/non-fiction/OUP/Castro/chQ.txt:0
+./written_2/non-fiction/OUP/Castro/chR.txt:0
+./written_2/non-fiction/OUP/Castro/chV.txt:0
+./written_2/non-fiction/OUP/Castro/chW.txt:0
+./written_2/non-fiction/OUP/Castro/chY.txt:0
+./written_2/non-fiction/OUP/Castro/chZ.txt:0
+./written_2/non-fiction/OUP/Fletcher/ch1.txt:1
+./written_2/non-fiction/OUP/Fletcher/ch10.txt:1
+./written_2/non-fiction/OUP/Fletcher/ch2.txt:1
+./written_2/non-fiction/OUP/Fletcher/ch5.txt:2
+./written_2/non-fiction/OUP/Fletcher/ch6.txt:1
+./written_2/non-fiction/OUP/Fletcher/ch9.txt:0
+./written_2/non-fiction/OUP/Kauffman/ch1.txt:0
+./written_2/non-fiction/OUP/Kauffman/ch10.txt:0
+./written_2/non-fiction/OUP/Kauffman/ch3.txt:0
+./written_2/non-fiction/OUP/Kauffman/ch4.txt:0
+./written_2/non-fiction/OUP/Kauffman/ch5.txt:0
+./written_2/non-fiction/OUP/Kauffman/ch6.txt:0
+./written_2/non-fiction/OUP/Kauffman/ch7.txt:0
+./written_2/non-fiction/OUP/Kauffman/ch8.txt:0
+./written_2/non-fiction/OUP/Kauffman/ch9.txt:0
+./written_2/non-fiction/OUP/Rybczynski/ch1.txt:0
+./written_2/non-fiction/OUP/Rybczynski/ch2.txt:0
+./written_2/non-fiction/OUP/Rybczynski/ch3.txt:2
+
+the grep -c prints out the count of line that contains "Western" in the path after OUP. This command is helpful if you want to make a data chart of the appearance of input string in a path. 
