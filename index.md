@@ -104,6 +104,7 @@ grep: ./written_2/non-fiction/OUP/Rybczynski: Is a directory
 ./written_2/travel_guides/berlitz1/IntroMallorca.txt:        the unbridled hedonism of topless beaches and singles bars, and the
 ./written_2/travel_guides/berlitz1/WhatToMadeira.txt:        Brazilian-style 
 samba rhythms — but don’t expect the hedonism or
+```
 
 grep -i prints out the file in the path that contains the input string no matter the case. This is useful when we want search if the path contain a string, no matter the syntax, which is useful for research. 
 
@@ -129,7 +130,7 @@ Hogmanay. The whole population comes out into the
 ./written_2/travel_guides/berlitz1/WhatToEdinburgh.txt:        into a five-night Hogmanay Festival of torchlight parades, street
 ./written_2/travel_guides/berlitz1/WhatToEdinburgh.txt:        <www.edinburghshogmanay.org>). For those who still have some
 ./written_2/travel_guides/berlitz1/WhatToEdinburgh.txt:        shortbread (traditionally served at Yuletide and Hogmanay) is rich in
-
+```
 The grep -i command search for the path in written_2 if any of the file contains the string "hogmanay", if so then prints the file path and the line that contains it. This command is useful for research about a particular string since we don't need to care about case. 
 
 ## grep -c ##
@@ -144,7 +145,7 @@ The grep -i command search for the path in written_2 if any of the file contains
 # output #
 
 1
-
+```
 grep -c prints the count of line that contains "Hogmanay" in the file IntroEdinburgh. This command is helpful if you want to make a data chart of the appearance of input string in a path. 
 
 # Ex 2: # 
@@ -199,5 +200,5 @@ grep -c prints the count of line that contains "Hogmanay" in the file IntroEdinb
 ./written_2/non-fiction/OUP/Rybczynski/ch1.txt:0
 ./written_2/non-fiction/OUP/Rybczynski/ch2.txt:0
 ./written_2/non-fiction/OUP/Rybczynski/ch3.txt:2
-
+```
 the grep -c prints out the count of line that contains "Western" in the path after OUP. This command is helpful if you want to make a data chart of the appearance of input string in a path. 
